@@ -1,19 +1,12 @@
 #!/usr/bin/python3
 import sys
 
-minus, zero, plus = 0, 0, 0
-x=0.0
+x = 0                     #もともと0.0だったのを0に変更
+for line in sys.stdin:
+    try:
+        x += int(line)    #intは文字列を整数に（失敗すると例外発生）
+    except ValueError:    #第3回で見たエラーの名前
+        x += float(line)
 
-for n in sys.stdin[1:]:
-    x += float(n)
+print(x)
 
-    if x < 0.0:
-        minus += 1
-    elif x > 0.0:
-        plus += 1
-    else:
-        zero += 1
-
-print("負:", minus)
-print("０:", zero)
-print("正:", plus)
