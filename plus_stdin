@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# SPDX-FileCopyrightText: 2026 Yuki Fujisawa
 import sys
 
 minus, zero, plus = 0, 0, 0
